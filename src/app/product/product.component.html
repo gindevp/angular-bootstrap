@@ -1,26 +1,20 @@
 <table class="table">
   <thead class="table-dark">
   <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Price</th>
+    <th>number</th>
+    <th>color</th>
+    <th>
+      result
+    </th>
+    <th>action</th>
   </tr>
   </thead>
   <tbody>
   <tr>
-    <td>1</td>
-    <td>IPhone 12</td>
-    <td>320000</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>IPhone 11</td>
-    <td>160000</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>IPhone X</td>
-    <td>100000</td>
+    <td><input  #element placeholder="Nhập phép tính" (change)="excutes(element.value)" ></td>
+    <td><input placeholder="Nhập màu" type="color" [(ngModel)]="color" ></td>
+    <td><input  placeholder="Kết quả" [ngModel]="result" [style.color]="color"></td>
+    <td><input type="button" value="tính" (click)="results()" ></td>
   </tr>
   </tbody>
 </table>
